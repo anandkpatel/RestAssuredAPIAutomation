@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 public class TC005_Delete_Employee_Record extends BaseClass {
 
     @BeforeClass
-    void deleteEmployee() throws InterruptedException
+    void TC005_deleteEmployee() throws InterruptedException
     {
         logger.info("*********Started TC005_Delete_Employee_Record **********");
         response = httpRequest.request(Method.DELETE, "/delete/"+ PropertyReader.getProp("EmployeeID")); //Pass ID to delete record
@@ -22,7 +22,7 @@ public class TC005_Delete_Employee_Record extends BaseClass {
     }
 
     @Test(priority = 1)
-    void checkResposeBody()
+    void TC005_checkResposeBody()
     {
         String responseBody = response.getBody().asString();
         Assert.assertTrue(responseBody.contains("Successfully! Record has been deleted"));
@@ -30,14 +30,14 @@ public class TC005_Delete_Employee_Record extends BaseClass {
     }
 
     @Test(priority = 2)
-    void checkStatusCode()
+    void TC005_checkStatusCode()
     {
         int statusCode = response.getStatusCode(); // Gettng status code
         Assert.assertEquals(statusCode, 200);
     }
 
     @Test(priority = 3)
-    void checkstatusLine()
+    void TC005_checkstatusLine()
     {
         String statusLine = response.getStatusLine(); // Gettng status Line
         Assert.assertEquals(statusLine, "HTTP/1.1 200 OK");
@@ -45,21 +45,21 @@ public class TC005_Delete_Employee_Record extends BaseClass {
     }
 
     @Test(priority = 4)
-    void checkContentType()
+    void TC005_checkContentType()
     {
         String contentType = response.header("Content-Type");
         Assert.assertEquals(contentType, "application/json");
     }
 
     @Test(priority = 5)
-    void checkserverType()
+    void TC005_checkserverType()
     {
         String serverType = response.header("Server");
         Assert.assertEquals(serverType, "cloudflare");
     }
 
     @Test(priority = 6)
-    void checkcontentEncoding()
+    void TC005_checkcontentEncoding()
     {
         String contentEncoding = response.header("Content-Encoding");
         Assert.assertEquals(contentEncoding, "gzip");

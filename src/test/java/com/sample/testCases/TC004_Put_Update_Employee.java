@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 public class TC004_Put_Update_Employee extends BaseClass {
 
     @Test(dataProvider = "EmployeeRecords")
-    void updateEmployee(String empName, String empSalary, String empAge) throws InterruptedException
+    void TC004_updateEmployee(String empName, String empSalary, String empAge) throws InterruptedException
     {
         logger.info("*********Started TC004_Put_Update_Employee **********");
 

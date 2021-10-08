@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 public class TC003_Post_Create_Employee extends BaseClass
 {
         @Test(dataProvider = "EmployeeRecords", priority = 1)
-        void prepareRequestParams(String empName, String empSalary, String empAge) throws InterruptedException
+        void TC003_prepareRequestParams(String empName, String empSalary, String empAge) throws InterruptedException
         {
             logger.info("*********Started TC003_Post_Create_Employee **********");
 

@@ -5,7 +5,7 @@
     <listeners>
         <listener class-name="com.sample.listeners.Listeners" />
     </listeners>
-    <test thread-count="5" name="EmployeesRestAPITest">
+    <test name="EmployeesRestAPITest">
         <classes>
             <class name="com.sample.testCases.TC001_Get_All_Employee" />
             <class name="com.sample.testCases.TC002_Get_Single_Employee" />

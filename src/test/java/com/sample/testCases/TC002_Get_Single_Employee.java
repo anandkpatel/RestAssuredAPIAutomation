@@ -13,7 +13,7 @@ public class TC002_Get_Single_Employee extends BaseClass
 {
 
     @BeforeClass
-    public void getSingleEmployee() throws InterruptedException
+    public void TC002_getSingleEmployee() throws InterruptedException
     {
         logger.info("********* Started TC002_Get_Single_Employee  **********");
 
@@ -28,7 +28,7 @@ public class TC002_Get_Single_Employee extends BaseClass
 
 
     @Test(priority = 1)
-    public void checkResposeBody()
+    public void TC002_checkResposeBody()
     {
         logger.info("********* Checking Response Body  **********");
         String responseBody = response.getBody().asString(); // Getting Response Body
@@ -38,7 +38,7 @@ public class TC002_Get_Single_Employee extends BaseClass
     }
 
     @Test(priority = 2)
-    public void checkStatusCode()
+    public void TC002_checkStatusCode()
     {
         logger.info("********* Checking Status Code  **********");
         int statusCode = response.getStatusCode(); // Gettng status code
@@ -46,7 +46,7 @@ public class TC002_Get_Single_Employee extends BaseClass
     }
 
     @Test(priority = 3)
-    public void checkstatusLine()
+    public void TC002_checkstatusLine()
     {
         logger.info("********* Checking Status Line  **********");
         String statusLine = response.getStatusLine(); // get the  status Line
@@ -55,7 +55,7 @@ public class TC002_Get_Single_Employee extends BaseClass
     }
 
     @Test(priority = 4)
-    public void checkContentType()
+    public void TC002_checkContentType()
     {
         logger.info("********* Checking Content Type  **********");
         String contentType = response.header("Content-Type"); // Getting Content Type
@@ -63,7 +63,7 @@ public class TC002_Get_Single_Employee extends BaseClass
     }
 
     @Test(priority = 5)
-    public void checkResponseTime()
+    public void TC002_checkResponseTime()
     {
         logger.info("********* Checking Response Time  **********");
         long responseTime = response.getTime(); // Getting response Time

@@ -50,7 +50,7 @@ public class Listeners extends TestListenerAdapter
         test=extent.createTest(result.getName()); // create new entry in th report
 
         test.log(Status.FAIL,  result.getName() + "Test case failed");
-        test.log(Status.FAIL, result.getThrowable());
+        test.log(Status.FAIL, result.getThrowable().getMessage());
 
 
     }
