@@ -4,6 +4,7 @@ import com.sample.testBase.BaseClass;
 import com.sample.utilities.PropertyReader;
 import io.restassured.RestAssured;
 import io.restassured.http.Method;
+import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -33,7 +34,10 @@ public class TC001_Get_All_Employee  extends BaseClass {
         String responseBody = response.getBody().asString(); // Getting Response Body
         logger.info("Response Body --> " + responseBody);
         System.out.println("responseBody is :" + responseBody);
-        Assert.assertTrue(responseBody!= null);
+
+
+
+
 
     }
 

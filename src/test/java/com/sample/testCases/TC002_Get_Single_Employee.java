@@ -3,6 +3,7 @@ package com.sample.testCases;
 import com.sample.testBase.BaseClass;
 import com.sample.utilities.PropertyReader;
 import io.restassured.http.Method;
+import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -33,8 +34,7 @@ public class TC002_Get_Single_Employee extends BaseClass
         String responseBody = response.getBody().asString(); // Getting Response Body
         logger.info("Response Body --> " + responseBody);
         System.out.println("responseBody is :" + responseBody);
-        Assert.assertEquals(responseBody.contains(PropertyReader.getProp("empID")),true);
-
+        Assert.assertTrue(responseBody.contains(PropertyReader.getProp("empID")));
     }
 
     @Test(priority = 2)
