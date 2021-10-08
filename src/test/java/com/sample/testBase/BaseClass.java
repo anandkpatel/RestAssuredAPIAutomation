@@ -1,5 +1,6 @@
 package com.sample.testBase;
 
+
 import com.sample.utilities.PropertyReader;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -9,13 +10,16 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.testng.annotations.BeforeClass;
 
+
 public class BaseClass {
 
     // Shared references
     public static RequestSpecification httpRequest;
     public static Response response;
 
+
     public Logger logger;
+
 
     @BeforeClass
     public void setup(){
@@ -26,16 +30,12 @@ public class BaseClass {
         logger.setLevel(Level.DEBUG);
 
         // Configure BaseURI To send the request
-        RestAssured.baseURI = "http://dummy.restapiexample.com/api/v1";
+        RestAssured.baseURI = PropertyReader.getProp("BaseURI");
         System.out.println("Base URI For the Test --> " +RestAssured.baseURI );
         httpRequest = RestAssured.given();
 
 
     }
-
-
-
-
 
 
 
