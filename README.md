@@ -23,11 +23,11 @@ Once you have folder structure imported wait for a while until maven download al
 **Now you all set to run the project.**
 
 ### It has following this implemented. 
-1. Get All Employee Test Case Class
-2. Get Single Employee Test Case Class
-3. Create Employee Record Test Case Class
-4. Update Employee Record Test Case Class
-5. Delete Employee Record Test Case Class
+1. Get All Employee Test Case 
+2. Get Single Employee Test Case
+3. Create Employee Record Test Case 
+4. Update Employee Record Test Case 
+5. Delete Employee Record Test Case 
 
 **1. Steps to Run the Test suite using Maven**
 
